@@ -1,0 +1,17 @@
+<h2>User List</h2>
+<table class="table table-bordered">
+	<thead>
+	  	<tr>
+			<th scope="col">#id</th>
+			<th scope="col">Nome</th>
+			<th scope="col">E-mail</th>			
+	  	</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let user of users">
+			<th scope="row">{{user.id}}</th>
+			<td>{{user.name}}</td>
+			<td>{{user.email}}</td>
+		</tr>
+	</tbody>
+</table>

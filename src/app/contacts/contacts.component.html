@@ -1,0 +1,26 @@
+<h1>Contact Form</h1>
+<form action="">
+    <p>Nome: <input type="text" name="name" [(ngModel)]="contact.name"></p>
+    <p>E-mail: <input type="text" name="email" [(ngModel)]="contact.email"></p>
+    <button type="button" (click)="cadastrar()">Cadastrar</button>
+</form>
+<br/>
+<hr>
+<h2>Contact List</h2>
+<table>
+    <tr>
+        <th>#id</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Ações</th>
+    </tr>
+    <tr *ngFor="let contact of contacts">
+        <td>{{contact.id}}</td>
+        <td>{{contact.name}}</td>
+        <td>{{contact.email}}</td>
+        <td>
+            <button (click)="atualizar(contact.id)">Atualizar</button>
+            <button (click)="deletar(contact.id)">Deletar</button>
+        </td>
+    </tr>
+</table>
