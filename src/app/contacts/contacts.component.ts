@@ -43,7 +43,7 @@ export class ContactsComponent implements OnInit {
 			contact => {
 				this.contact = new ContactModel();
 				this.listContacts();
-			}, 
+			},
 			err => {
 				console.log('Erro ao atualizar contato.', err);
 			}
